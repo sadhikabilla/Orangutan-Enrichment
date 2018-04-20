@@ -2,7 +2,7 @@
 
 ### An enrichment system designed for the Orangutans at the Singapore Zoo
 
-<img src="https://github.com/sadhikabilla/Orangutan-Enrichment/blob/master/orang.jpg" width=200>
+<img src="https://github.com/sadhikabilla/Orangutan-Enrichment/blob/master/orang.jpg" width=500>
 
 ## Purpose
 * Studies in the wild and in captivity indicate that the great apes, chimpanzees, gorillas, and orangutans, are among the smartest land animals on the planet
