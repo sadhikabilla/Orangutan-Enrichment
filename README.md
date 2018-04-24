@@ -11,7 +11,7 @@ Studies in the wild and in captivity indicate that the great apes, chimpanzees, 
 The setup consists of 3 components (Vines, feeder and sprinkler) that work together as a comperhensive enrichment system to encourage cooperation between the animals and promote their physical & mental well being.
 
 
-<img src= "https://github.com/sadhikabilla/Orangutan-Enrichment/blob/master/components.png" width=300>
+<img src= "https://github.com/sadhikabilla/Orangutan-Enrichment/blob/master/components.png" width=500>
 
 A detailed explanation of each of the components can be found in the zoo manual.pdf.  
 
