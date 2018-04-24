@@ -56,7 +56,18 @@ void onResponse(String command) {
 This folder contains the FeederReceiver (feeder receiver), Transmitter (from the touch sensors) and the HoseReceiver (for the sprinkler system). The nr905Tranceiver.cpp files are important to include for wireless transmission.  
 
 Based on the appropriate button input (A0 for feeder, A1 for sprinkler), either the feeder or the sprinkler is triggerd. The touch sensors are emiminated for the manual mode. 
-
+```
+ //When the buton A0 is pushed and A1 is not, the feeder is triggered
+  if((digitalRead(INPUT0) == LOW) && (digitalRead(INPUT1) == HIGH)){
+    Serial.println("The feder is triggered");
+    transmitter.send("TURN 90");  
+    transmitter.send("TURN HOSE 0");
+ //When the buton A1 is pushed and A0 is not, the hose is triggered    
+  } else if((digitalRead(INPUT1) == LOW) && (digitalRead(INPUT0) == HIGH)){
+    Serial.println("The hose is triggered");
+    transmitter.send("TURN HOSE 120");
+    transmitter.send("TURN 0");
+```
 ### Debug mode
 This folder contains the Stand_alone_hose and the Stand_alone_feeder folders. The Stand_alone_hose contains the HoseTransmitter and the HoseReceiver, while the Stand_alone_feeder contains the FeederTransmitter and the FeederReceiver. 
 
