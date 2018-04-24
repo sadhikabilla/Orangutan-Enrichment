@@ -14,7 +14,7 @@ A detailed explanation of each of the components can be found in the zoo manual.
 
 ### Repository Organisation
 
-The repository consists of 3 folders - Manual_mode, Debug_mode and Automatic_mode. In order to run the code you will need to install the Arduino software from <a href="https://www.arduino.cc/en/Main/Software">. 
+The repository consists of 3 folders - Manual_mode, Debug_mode and Automatic_mode. In order to run the code you will need to install the Arduino software from <a href="https://www.arduino.cc/en/Main/Software" colour='black'>. 
 
 ### Automatic mode
 This folder contains the Receiver (feeder receiver), Transmitter (from the touch sensors) and the valve-servo-control_receiver (for the sprinkler system). The nr905Tranceiver.cpp files are important to include for wireless transmission.  
