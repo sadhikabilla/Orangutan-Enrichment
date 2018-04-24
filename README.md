@@ -19,8 +19,39 @@ The repository consists of 3 folders - Manual_mode, Debug_mode and Automatic_mod
 ### Automatic mode
 This folder contains the Receiver (feeder receiver), Transmitter (from the touch sensors) and the valve-servo-control_receiver (for the sprinkler system). The nr905Tranceiver.cpp files are important to include for wireless transmission.  
 
-The automatic mode is the default mode. When both wires from pins A0 and A2 (refer to circut diagram in manual) are touched, a signal is sent from the tramsmitter to the feeder and the sprinkler to trigger accordingly. Currently, the feeder is set to dispense at every 6 second interval. This can be adjusted from the ```timeInterval``` variable in the Transmitter file. When the feeder (Receiver) receives the signal 'TURN 90', the motor in the feeder is triggered. Similarly, when the sprinkler (valve-servo-control_receiver) receives a signal 'TURN HOSE 120', the servo in the sprinkler is trigger to turn. 
+The automatic mode is the default mode. When both wires from pins A0 and A2 (refer to circut diagram in manual) are touched, a signal is sent from the tramsmitter to the feeder and the sprinkler to trigger accordingly. Currently, the feeder is set to dispense at every 6 second interval. This can be adjusted from the ```timeInterval``` variable in the Transmitter file. 
+```
+float currentTime = 0;
+boolean check90 = false;
+float timeDiff = 0; //Controls the amount of time the screw rotates for - currently set to 3 seconds. The value can be modified accordingly. 
+float timeInterval = 6000; //The time interval between subsequent turns of the feeder. The time interval is currently set to 6 seconds and can be modified accordingly
+```
 
+When the feeder (Receiver) receives the signal 'TURN 90', the motor in the feeder is triggered. 
+```
+void onResponse(String command) {
+
+    //Changes state based on signal from transmitter 
+    if(command == "TURN 90"){
+        state = HIGH;
+    }else if (command == "TURN 0"){
+        state = LOW;
+
+    }
+}
+```
+
+Similarly, when the sprinkler (valve-servo-control_receiver) receives a signal 'TURN HOSE 120', the servo in the sprinkler is trigger to turn. 
+```
+void onResponse(String command) {
+
+  if(command == "TURN HOSE 120"){
+    angle = 120;
+  }else if(command == "TURN HOSE 0"){
+    angle = 0;
+  }
+}
+```
 ### Manual mode
 This folder contains the FeederReceiver (feeder receiver), Transmitter (from the touch sensors) and the HoseReceiver (for the sprinkler system). The nr905Tranceiver.cpp files are important to include for wireless transmission.  
 
