@@ -9,7 +9,7 @@ Studies in the wild and in captivity indicate that the great apes, chimpanzees, 
 
 #### Take a look at the development process here! 
 
-<img src = "https://youtu.be/oGEmEEOKdpw">
+[linkname](https://youtu.be/oGEmEEOKdpw)
 
 ### Designing a cohesive system
 The setup consists of 3 components (Vines, feeder and sprinkler) that work together as a comperhensive enrichment system to encourage cooperation between the animals and promote their physical & mental well being.
